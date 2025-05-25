@@ -39,16 +39,8 @@ function beyondRange(pos) {
 function handleButtonState(pos) {
 	const atStart = pos === 0;
 	const atEnd = Math.abs(pos) >= images.length - 1;
-
 	prevButton.disabled = atStart;
-	prevButton.setAttribute("aria-label", 
-		atStart ? "Previous image (unavailable)" : "Previous image"
-	);
-
 	nextButton.disabled = atEnd;
-	nextButton.setAttribute("aria-label", 
-		atEnd ? "Next image (unavailable)" : "Next image"
-	);
 }
 
 function slideNext() { slide((pos) => pos - 1); }
