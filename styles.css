@@ -27,7 +27,7 @@ img {
 		display: flex;
 		gap: var(--gap);
 		translate: calc(var(--pos, 0) * (100% + var(--gap)));
-		transition: translate .2s ease-out;
+		transition: translate 500ms cubic-bezier(.4,.84,.44,1);
 
 		:is(img, picture) {
 			flex-grow: 1;
