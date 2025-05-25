@@ -9,6 +9,7 @@ Demo: https://dbran.cc/image-carousel/
 - `prev`/`next` buttons
 - optional gaps between images
 - moderate slide animations
+- keyboard navigation
 - supports swipe gestures
 
 ## Usage
