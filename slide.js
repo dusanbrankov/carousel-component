@@ -74,3 +74,9 @@ function handleSwipeEnd(e) {
 		deltaX < 0 ? slideNext() : slidePrev()
 	}
 }
+
+document.addEventListener("keydown", (e) => {
+	if (e.key === "ArrowLeft") slidePrev();
+	if (e.key === "ArrowRight") slideNext();
+});
+
