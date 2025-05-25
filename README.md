@@ -1,5 +1,16 @@
-# Image Carousel Implementation
+# Carousel Component
 
-This is a prototype of a button-controlled image carousel. Unlike many tutorials out there, it doesn't come with bloated styles or complex code. It's meant to be tweaked and extended by the developer based on current implementation needs.
+A simple carousel component for use in other projects. It can be tweaked and extended based on implementation needs.
 
-Since the code is simple and easy to follow (less than 20 lines of JavaScript), new features can be added without  difficulty.
+Demo: https://dbran.cc/image-carousel/
+
+## Features
+
+- `prev`/`next` buttons
+- optional gaps between images
+- moderate slide animations
+- supports swipe gestures
+
+## Usage
+
+Download this repository and open the `index.html` file in your browser. The webpage is responsive and works well on mobile devices too.
