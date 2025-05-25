@@ -1,19 +1,19 @@
 const root = document.querySelector(".slide");
 
 const container = root.querySelector(".slide-images");
-const imagesNum = container.querySelectorAll("img").length;
+const images = container.querySelectorAll("img");
 
-const slideNext = root.querySelector(".slide-next");
-const slidePrev = root.querySelector(".slide-prev");
+const nextButton = document.querySelector(".slide-next");
+const prevButton = document.querySelector(".slide-prev");
 
-slideNext.onclick = () => slide((i) => i - 1);
-slidePrev.onclick = () => slide((i) => i + 1);
+nextButton.onclick = () => slide((pos) => pos - 1);
+prevButton.onclick = () => slide((pos) => pos + 1);
 
-function slide(getNewIndex) {
-	const currentIndex = parseInt(container.style.getPropertyValue("--i") || 0);
-	const newIndex = getNewIndex(currentIndex);
-	if (newIndex > 0 || Math.abs(newIndex) >= imagesNum) {
+function slide(posUpdater) {
+	const currentPos = parseInt(container.style.getPropertyValue("--pos") || 0);
+	const newPos = posUpdater(currentPos);
+	if (newPos > 0 || Math.abs(newPos) >= images.length) {
 		return;
 	}
-	container.style.setProperty("--i", newIndex);
+	container.style.setProperty("--pos", newPos);
 }

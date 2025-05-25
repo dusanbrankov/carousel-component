@@ -24,7 +24,7 @@ img {
 
 	.slide-images {
 		display: flex;
-		translate: calc(var(--i, 0) * 100%);
+		translate: calc(var(--pos, 0) * 100%);
 		transition: translate .2s ease-out;
 
 		:is(img, picture) {
