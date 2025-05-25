@@ -37,8 +37,8 @@ function beyondRange(pos) {
 }
 
 function handleButtonState(pos) {
-	atStart = pos === 0;
-	atEnd = Math.abs(pos) >= images.length - 1;
+	const atStart = pos === 0;
+	const atEnd = Math.abs(pos) >= images.length - 1;
 
 	prevButton.disabled = atStart;
 	prevButton.setAttribute("aria-label", 
