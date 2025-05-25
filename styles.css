@@ -23,8 +23,10 @@ img {
 	overflow: hidden;
 
 	.slide-images {
+		--gap: 12px; /* value must contain a unit, e.g. '0px' for no gaps */
 		display: flex;
-		translate: calc(var(--pos, 0) * 100%);
+		gap: var(--gap);
+		translate: calc(var(--pos, 0) * (100% + var(--gap)));
 		transition: translate .2s ease-out;
 
 		:is(img, picture) {
