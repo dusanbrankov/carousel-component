@@ -9,17 +9,31 @@ const prevButton = document.querySelector(".slide-prev");
 nextButton.onclick = slideNext;
 prevButton.onclick = slidePrev;
 
+const BOUNCE_DURATION = 300;
+container.style.setProperty("--bounce-duration", BOUNCE_DURATION);
+
 // Disable "next" button on first load
 handleButtonState(0);
 
 function slide(posUpdater) {
 	const currentPos = parseInt(container.style.getPropertyValue("--pos") || 0);
 	const newPos = posUpdater(currentPos);
-	if (newPos > 0 || Math.abs(newPos) >= images.length) {
+
+	if (beyondRange(newPos)) {
+		container.style.setProperty("--n", newPos < 0 ? -1 : 1);
+		container.classList.add("bounce");
+		setTimeout(() => {
+			container.classList.remove("bounce");
+		}, BOUNCE_DURATION);
 		return;
 	}
+
 	handleButtonState(newPos);
 	container.style.setProperty("--pos", newPos);
+}
+
+function beyondRange(pos) {
+	return pos > 0 || Math.abs(pos) >= images.length
 }
 
 function handleButtonState(pos) {
