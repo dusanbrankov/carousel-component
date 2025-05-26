@@ -68,7 +68,10 @@ function handleSwipeEnd(e) {
 }
 
 document.addEventListener("keydown", (e) => {
-	if (e.key === "ArrowLeft") slidePrev();
-	if (e.key === "ArrowRight") slideNext();
+	if (e.key === "ArrowLeft") {
+		slidePrev();
+	} else if (e.key === "ArrowRight") {
+		slideNext();
+	}
 });
 
