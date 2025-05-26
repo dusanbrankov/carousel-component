@@ -10,16 +10,28 @@
 <body>
 	<main>
 		<div class="slide">
-			<div class="slide-images">
-				<img alt="" src="https://picsum.photos/id/10/2500/1667">
-				<img alt="" src="https://picsum.photos/id/37/2000/1333">
-				<img alt="" src="https://picsum.photos/id/50/4608/3072">
-				<img alt="" src="https://picsum.photos/id/155/3264/2176">
-			</div>
-			<div class="slide-control">
-				<button class="slide-prev" aria-label="Previous image">&lt;</button>
-				<button class="slide-next" aria-label="Next image">&gt;</button>
-			</div>
+			<ul class="slide-images" role="list" aria-label="gallery">
+				<li class="slide-image">
+					<img alt="" src="https://picsum.photos/id/10/2500/1667">
+				</li>
+				<li class="slide-image">
+					<img alt="" src="https://picsum.photos/id/37/2000/1333">
+				</li>
+				<li class="slide-image">
+					<img alt="" src="https://picsum.photos/id/50/4608/3072">
+				</li>
+				<li class="slide-image">
+					<img alt="" src="https://picsum.photos/id/155/3264/2176">
+				</li>
+			</ul>
+			<ul class="slide-control" role="list" aria-label="gallery controls">
+				<li>
+					<button class="slide-prev" aria-label="Previous image">&lt;</button>
+				</li>
+				<li>
+					<button class="slide-next" aria-label="Next image">&gt;</button>
+				</li>
+			</ul>
 		</div>
 	</main>
 </body>

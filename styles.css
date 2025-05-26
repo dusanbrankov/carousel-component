@@ -19,6 +19,11 @@ img {
 	height: auto;
 }
 
+/* Ensure that lists remain available to assistive technologies */
+ul[role="list"] {
+  list-style-type: none;
+}
+
 .slide {
 	overflow: hidden;
 
@@ -34,9 +39,14 @@ img {
 			animation: bounce calc(var(--bounce-duration, 0) * 1ms) ease-out;
 		}
 
-		:is(img, picture) {
-			flex: 1 0 auto;
+		.slide-image {
+			flex: 1 0 100%;
 			aspect-ratio: 1;
+		}
+
+		:is(img, picture) {
+			min-width: 100%;
+			min-height: 100%;
 			object-fit: cover;
 			pointer-events: none;
 		}
