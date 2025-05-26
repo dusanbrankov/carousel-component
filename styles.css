@@ -35,7 +35,7 @@ img {
 		}
 
 		:is(img, picture) {
-			flex-grow: 1;
+			flex: 1 0 auto;
 			aspect-ratio: 1;
 			object-fit: cover;
 			pointer-events: none;
